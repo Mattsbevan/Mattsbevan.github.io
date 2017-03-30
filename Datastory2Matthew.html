@@ -1,0 +1,151 @@
+<head>
+	<title>
+		Student Loans Skyrocketing in last four years while Credit Card debt remains level.
+	</title>
+	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"> </script>
+	<script src="http://code.highcharts.com/highcharts.js"> </script>
+	<style>
+		
+		.wrapper {
+			width:80%;
+			margin:0 auto;
+			margin-top:20px;
+		}
+
+		h1{
+			font-family: sans-serif;
+			font-size: 26px;
+			font-weight:bold;
+		}
+
+		p{
+			font-family: sans-serif;
+			line-height: 1.2;
+			font-weight: 200;
+		}
+
+		.source {
+			font-family: sans-serif;
+			font-size: 12px;
+			color:gray;
+			line-height: 1.5em;
+		}
+
+
+
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<h1>Student Loan Debt in the US has not gone down in over a decade while US total credit card debt has stayed relatively constant in the same period.</h1>
+	<p>In the time from 2004 to 2016 Credit card debt in the US has gone up only $41 Billion, even going down briefly between 2008 and 2012. <br> Comparitively in the same frame total Student Loan debt has increased by $949 Billion, nearly quadrupling, and at no point going down.</p>
+	<div id="chart1"></div>
+	<div id="chart2"></div>
+	<div class='source'>
+		<p>
+			SOURCE: US Census Bureau; <br>
+			US Federal Reserve; <br>
+			Federal Reserve Bank of New York; <br>
+			2013 Survey of Consumer Finances; <br>
+
+		</p>
+	</div>
+
+
+	<br>
+	<body>
+ 
+<h2>Total combined student loan debt in the United States is currently well over a trillion dollars, making it almost twice as much as the total combined credit card debt for the nation. This was not always the case however: in 2004 the total credit card debt in the US was nearly $400 Billion more than student loan debt, which was at the time a measly $330 billion (compared with the current amount of $1.3 trillion, or for my math whizzes out there: a whole lot more.) In the 12 years since 2004, and the first Indonesian Democratic election, student loan debt has risen constantly, going up by at least $30 Billion every year. In comparison credit card debt continued to climb only until it peaked at $858 billion in 2008 and then proceeded to drop, dropping below student loan debt somewhere in the beginning of 2010. Looking at a long term, big picture kind of view, credit card debt in the US was $706 billion in 2004, and was $747 billion in 2016, representing a change of only $41 billion over 12 years. Student loan debt on the other hand, was $330 billion in 2004, and by 2016 was just around $1.3 trillion, representing a change of almost $1,000,000,000,000.
+</h2>
+ <br>
+
+
+
+
+<img src="https://pbs.twimg.com/media/C8IcbnEUMAIx-RJ.png:large" style="width:50em"></img>
+
+<br>
+
+<h3>Student loan debt in the US is rising so much because school is becoming more expensive. For people aged 20-29 40% of them have outstanding student loan debt, compared to people who are 60+, whom only 4% have outstanding student loan debt. A large part of this can of course be attributed to people who are 60+ having significantly more time to pay off their student loans, but looking at other age groups gives more information. The percentage of people age 20-29 who have outstanding student loan debts is twice that of people ages 40-49, which is a difference of at most 20 years.</h3> 
+
+
+
+<img src="https://pbs.twimg.com/media/C8IO9SjUwAAgjxh.jpg"></img>
+
+<br>
+
+by Matthew Bevan
+
+
+
+<div>
+
+	</body>
+</div>
+	<!--JS: Chart1 -->
+
+	<script>
+	//Chart 1
+		$(function() {
+
+			var myChart = Highcharts.chart('chart1', {
+
+				chart: {
+					type: 'line'
+				},
+				series: [{
+					name: 'Student Loan Debt',
+					data: [330, 377, 446, 528, 610, 694, 778.2, 870.2, 956, 1027, 1126, 1203, 1279,], 
+					color: '#33FFE0'
+
+					},
+
+					{
+						name:'Credit Card Debt' ,
+						data:[706, 732, 754, 817, 858, 812, 731, 693, 674, 672, 680, 714, 747,] ,
+						color: '#FF9700'
+					}
+				],
+
+				plotOptions: {
+					column: {
+						stacking: 'normal'
+					}
+				},
+					xAxis: {
+						categories:['2004', '2005','2006', '2007', '2008', '2009', '2010','2011','2012','2013','2014','2015','2016']
+					},
+
+					yAxis: {
+						title: {
+							text: 'Total Debt in Billions'
+						},
+						gridLineWidth: 0,
+					},
+					
+
+					title: {
+						text:''
+					},
+
+					credits: {
+						enabled: false
+					},
+
+					tooltip:{
+						 
+					}
+
+			});
+
+		});
+
+
+
+	</script>
+
+	
+
+
+</body>
+

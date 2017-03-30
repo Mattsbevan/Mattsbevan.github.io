@@ -1,0 +1,120 @@
+<head>
+	<title>
+		Student Loans Skyrocketing in last four years while Credit Card debt remains level.
+	</title>
+	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"> </script>
+	<script src="http://code.highcharts.com/highcharts.js"> </script>
+	<style>
+		
+		h1{
+			font-family: sans-serif;
+			font-size: 26px;
+			font-weight:bold;
+		}
+
+		p{
+			font-family: sans-serif;
+			line-height: 1.2;
+			font-weight: 200;
+		}
+
+		.source {
+			font-family: sans-serif;
+			font-size: 12px;
+			color:gray;
+			line-height: 1.5em;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<h1>Student Loan Debt in the US has not gone down in over a decade while US total credit card debt has stayed relatively constant in the same period.</h1>
+	<p>In the time from 2004 to 2016 Credit card debt in the US has gone up on $41 Billion, even going down briefly between 2008 and 2012. <br> Comparitively in the same frame total Student Loan debt has increased by $949 Billion, nearly quadrupling, and at no point going down.</p>
+	<div id="chart1"></div>
+	<div id="chart2"></div>
+	<div class='source'>
+		<p>
+			SOURCE: US Census Bureau; <br>
+			US Federal Reserve; <br>
+			Federal Reserve Bank of New York; <br>
+			2013 Survey of Consumer Finances; <br>
+
+		</p>
+	</div>
+
+	<!--JS: Chart1 -->
+
+	<script>
+	//Chart 1
+		$(function() {
+
+			var myChart = Highcharts.chart('chart1', {
+
+				chart: {
+					type: 'column'
+				},
+				series: [{
+					name: 'Student Loan Debt',
+					data: [330, 377, 446, 528, 610, 694, 778.2, 870.2, 956, 1027, 1126, 1203, 1279,], 
+					color: '#33FFE0'
+
+					},
+
+					{
+						name:'Credit Card Debt' ,
+						data:[706, 732, 754, 817, 858, 812, 731, 693, 674, 672, 680, 714, 747,] ,
+						color: '#FF9700'
+					}
+				],
+
+				plotOptions: {
+					column: {
+						stacking: 'normal'
+					}
+				},
+					xAxis: {
+						categories:['2004', '2005','2006', '2007', '2008', '2009', '2010','2011','2012','2013','2014','2015','2016']
+					},
+
+					yAxis: {
+						title: {
+							text: 'Total Debt in Billions'
+						},
+						gridLineWidth: 0,
+					},
+					
+
+					title: {
+						text:''
+					},
+
+					credits: {
+						enabled: false
+					},
+
+					tooltip:{
+						 
+					}
+
+			});
+
+		});
+
+
+
+	</script>
+
+	
+
+
+</body>
+
+<br>
+<body>
+
+
+Article Here
+
+</body>
